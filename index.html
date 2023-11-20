@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Etch a sketch</title>
+</head>
+<body>
+    <div class="container-all">
+        <div class="container-title">
+            <p class="title">Welcome to Etch a sketch!</p>
+        </div>
+        <div class="container-body">
+                <div class="settings-container">
+                    <div class="choose-color">
+                        <span><button class="button-a" type="submit" onclick="changeColor('black')">Black</button></span>
+                        <span><button class="button-b" type="submit" onclick="changeColor('white')">Erase</button></span>
+                        <span><button class="button-c" type="submit" onclick="changeColor('rainbow')">Rainbow</button></span>
+                    </div>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="64" value="16" class="slider" id="myRange" onchange="changeSize(this.value)">
+                        <p class="slider-info">16x16</p>
+                    </div>
+                </div>         
+            <div class="container"></div>
+         </div>
+    </div>
+
+
+    <script src="etch-sketch.js"></script>
+</body>
+</html>
