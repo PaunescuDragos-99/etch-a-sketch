@@ -28,6 +28,23 @@ function changeSquareColor(){
 
 function changeColor(colorSelect){
     color = colorSelect;
+    if(colorSelect == 'black'){
+        document.querySelector('.button-a').style.backgroundColor = `#04AA6D`;
+        document.querySelector('.button-b').style.backgroundColor = `white`;
+        document.querySelector('.button-c').style.backgroundColor = `white`;
+    }else if(colorSelect == 'white'){
+        document.querySelector('.button-a').style.backgroundColor = `white`;
+        document.querySelector('.button-b').style.backgroundColor = `rgb(0, 247, 255)`;
+        document.querySelector('.button-c').style.backgroundColor = `white`;
+    }else if(colorSelect == 'rainbow'){
+        document.querySelector('.button-a').style.backgroundColor = `white`;
+        document.querySelector('.button-b').style.backgroundColor = `white`;
+        document.querySelector('.button-c').style.backgroundColor = `rgb(238, 68, 196)`;
+    }else{
+        document.querySelector('.button-a').style.backgroundColor = `white`;
+        document.querySelector('.button-b').style.backgroundColor = `white`;
+        document.querySelector('.button-c').style.backgroundColor = `white`;
+    }
     console.log(color);
 }
 
@@ -42,5 +59,10 @@ function chooseColor(value){
     return 'blue';
 }
 
+function resetBoard() {
+    let container = document.querySelector('.container');
+    let grid = container.querySelectorAll('div');
+    grid.forEach(grid => grid.style.backgroundColor = `white`);
+}
 
 

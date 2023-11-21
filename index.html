@@ -7,6 +7,11 @@
     <title>Etch a sketch</title>
 </head>
 <body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+     </div>
     <div class="container-all">
         <div class="container-title">
             <p class="title">Welcome to Etch a sketch!</p>
@@ -14,13 +19,16 @@
         <div class="container-body">
                 <div class="settings-container">
                     <div class="choose-color">
-                        <span><button class="button-a" type="submit" onclick="changeColor('black')">Black</button></span>
-                        <span><button class="button-b" type="submit" onclick="changeColor('white')">Erase</button></span>
-                        <span><button class="button-c" type="submit" onclick="changeColor('rainbow')">Rainbow</button></span>
+                        <span><button class="button-a button-a:hover" type="submit" onclick="changeColor('black')">Black</button></span>
+                        <span><button class="button-b button-b:hover" type="submit" onclick="changeColor('white')">Erase</button></span>
+                        <span><button class="button-c button-c:hover" type="submit" onclick="changeColor('rainbow')">Rainbow</button></span>
+                        <span class="color-pick-text">Choose a color:</span>
+                        <input type="color" class="color-pick" onchange="changeColor(this.value)"/>
                     </div>
                     <div class="slidecontainer">
                         <input type="range" min="1" max="64" value="16" class="slider" id="myRange" onchange="changeSize(this.value)">
                         <p class="slider-info">16x16</p>
+                        <button class="reset button-a button-a:hover" style="background-color: rgb(122, 165, 42);" onclick="resetBoard()">Clear</button>
                     </div>
                 </div>         
             <div class="container"></div>
